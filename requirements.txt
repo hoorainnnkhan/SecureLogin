@@ -1,0 +1,5 @@
+streamlit
+twilio
+bcrypt
+python-dotenv
+pyodbc
