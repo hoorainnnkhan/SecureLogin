@@ -57,6 +57,13 @@ def send_otp_email(receiver_email, otp):
 
     except Exception as e:
 
-        print("Email sending failed:", repr(e))
+        st.error(f"Email Error: {type(e).__name__}: {e}")
 
-        return False
+    print("Email sending failed:", repr(e))
+
+    try:
+        server.quit()
+    except:
+        pass
+
+    return False
